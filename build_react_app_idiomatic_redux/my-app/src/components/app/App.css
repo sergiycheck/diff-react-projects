@@ -1,0 +1,47 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.App ul li:hover {
+  cursor: pointer;
+}
+
+.todo-item {
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+.todo-item-completed {
+  text-decoration: line-through;
+  color: lightgray;
+}
+
+.filter {
+  padding: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+}
+
+.filter-active {
+  text-decoration: underline;
+}
