@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import ErrorPage from './components/error-page';
 import { ExampleComponentGlobalState } from './components/hookstate-docs/global-state';
+import { LocalState } from './components/hookstate-docs/localstate';
 import Root from './components/root';
 
 export const rootChildren = [
@@ -11,6 +12,10 @@ export const rootChildren = [
   {
     path: 'other-element-123',
     element: <div>other element 123</div>,
+  },
+  {
+    path: 'intro-local-state',
+    element: <LocalState />,
   },
 ];
 
