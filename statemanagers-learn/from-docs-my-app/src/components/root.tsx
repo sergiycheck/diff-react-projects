@@ -1,10 +1,41 @@
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import { hookStateElements, immerElements, RouterElementType } from '../router';
+import classnames from 'classnames';
 
 export default function Root() {
-  return (
-    <div className="grid-page">
+  const [docElClientWidth, setDocElClientWidth] = React.useState(
+    document.documentElement.clientWidth
+  );
+  const phoneClientWidthPx = 800;
+
+  const [hideSidePannel, setHideSidePannel] = React.useState(false);
+
+  React.useEffect(() => {
+    const resizeHandler = (e: any) => {
+      setDocElClientWidth(document.documentElement.clientWidth);
+    };
+
+    window.addEventListener('resize', resizeHandler);
+
+    return () => {
+      window.removeEventListener('resize', resizeHandler);
+    };
+  }, []);
+
+  React.useEffect(() => {
+    if (docElClientWidth < phoneClientWidthPx) {
+      setHideSidePannel(true);
+    } else {
+      setHideSidePannel(false);
+    }
+  }, [docElClientWidth]);
+
+  let renderedSideBarContent;
+  if (docElClientWidth < phoneClientWidthPx) {
+    renderedSideBarContent = <div>≡</div>;
+  } else {
+    renderedSideBarContent = (
       <div className="sidebar">
         <NavElements
           routerElements={hookStateElements}
@@ -17,6 +48,17 @@ export default function Root() {
           expand={true}
         />
       </div>
+    );
+  }
+
+  const containerClassNames = classnames({
+    'grid-page': true,
+    'grid-page-small': hideSidePannel,
+  });
+
+  return (
+    <div className={containerClassNames}>
+      {renderedSideBarContent}
       <div className="details">
         <Outlet />
       </div>

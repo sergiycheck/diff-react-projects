@@ -4,7 +4,10 @@ import { ExampleComponentGlobalState } from './components/hookstate-docs/global-
 import { LocalState } from './components/hookstate-docs/localstate';
 import NestedState from './components/hookstate-docs/nested-state';
 import NestedStateExamples from './components/hookstate-docs/nested-state-examples';
+import { BasicInstallation } from './components/immer-docs/basics-installation';
+import { CurriedProducers } from './components/immer-docs/curried-producers';
 import { TodoListImmerFirst } from './components/immer-docs/simple-todo';
+import { UsingProduceTodos } from './components/immer-docs/using-produce';
 import Root from './components/root';
 
 export type RouterElementType = {
@@ -39,6 +42,18 @@ export const immerElements: RouterElementType[] = [
   {
     path: 'immer-simple-todo',
     element: <TodoListImmerFirst />,
+  },
+  {
+    path: 'basic-installation',
+    element: <BasicInstallation />,
+  },
+  {
+    path: 'using-produce-todos',
+    element: <UsingProduceTodos />,
+  },
+  {
+    path: 'using-curried-producers',
+    element: <CurriedProducers />,
   },
 ];
 

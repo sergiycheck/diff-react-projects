@@ -39,6 +39,10 @@ body {
   grid-template-columns: 1fr 2fr;
 }
 
+.grid-page-small {
+  grid-template-columns: 1rem 1fr;
+}
+
 ul {
   padding: 0;
   margin: 0;
