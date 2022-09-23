@@ -4,6 +4,7 @@ import { ExampleComponentGlobalState } from './components/hookstate-docs/global-
 import { LocalState } from './components/hookstate-docs/localstate';
 import NestedState from './components/hookstate-docs/nested-state';
 import NestedStateExamples from './components/hookstate-docs/nested-state-examples';
+import AdvancedImmerPatches from './components/immer-docs/advanced-features/patches/patches';
 import { BasicInstallation } from './components/immer-docs/basics/basics-installation';
 import { CurriedProducers } from './components/immer-docs/basics/curried-producers';
 import { ReactAndImmerTodo } from './components/immer-docs/basics/reactAndImmer';
@@ -74,6 +75,10 @@ export const immerElements: RouterElementType[] = [
   {
     path: 'nested-data-structures',
     element: <NestedDataStructures />,
+  },
+  {
+    path: 'advanced-immer-patches',
+    element: <AdvancedImmerPatches />,
   },
 ];
 
