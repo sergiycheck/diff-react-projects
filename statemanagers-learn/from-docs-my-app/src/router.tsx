@@ -6,6 +6,7 @@ import NestedState from './components/hookstate-docs/nested-state';
 import NestedStateExamples from './components/hookstate-docs/nested-state-examples';
 import { BasicInstallation } from './components/immer-docs/basics-installation';
 import { CurriedProducers } from './components/immer-docs/curried-producers';
+import { ReactAndImmerTodo } from './components/immer-docs/reactAndImmer';
 import { TodoListImmerFirst } from './components/immer-docs/simple-todo';
 import { UsingProduceTodos } from './components/immer-docs/using-produce';
 import Root from './components/root';
@@ -54,6 +55,10 @@ export const immerElements: RouterElementType[] = [
   {
     path: 'using-curried-producers',
     element: <CurriedProducers />,
+  },
+  {
+    path: 'react-and-immer-todo',
+    element: <ReactAndImmerTodo />,
   },
 ];
 

@@ -1,5 +1,6 @@
 import React, { memo, useCallback, useState } from 'react';
 import produce from 'immer';
+import { useImmer } from 'use-immer';
 
 type Todo = {
   id: string;
@@ -7,7 +8,7 @@ type Todo = {
   done: boolean;
 };
 
-export const TodoListImmerFirst = () => {
+function useTodosAndHandlersV1() {
   const [todos, setTodos] = useState<Todo[]>([
     {
       id: 'React',
@@ -45,6 +46,17 @@ export const TodoListImmerFirst = () => {
     );
   }, []);
 
+  return {
+    todos,
+    handleAdd,
+    handleToggle,
+    unfinishedTodoCount,
+  };
+}
+
+export const TodoListImmerFirst = () => {
+  const { todos, handleAdd, handleToggle, unfinishedTodoCount } =
+    useTodosAndHandlersV1();
   return (
     <div>
       <button onClick={handleAdd}>Add Todo</button>
