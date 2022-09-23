@@ -1,0 +1,3 @@
+[submodule "react-starter-kit/react-starter-kit"]
+	path = react-starter-kit/react-starter-kit
+	url = https://github.com/kriasoft/react-starter-kit.git
