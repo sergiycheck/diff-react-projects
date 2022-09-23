@@ -4,11 +4,14 @@ import { ExampleComponentGlobalState } from './components/hookstate-docs/global-
 import { LocalState } from './components/hookstate-docs/localstate';
 import NestedState from './components/hookstate-docs/nested-state';
 import NestedStateExamples from './components/hookstate-docs/nested-state-examples';
-import { BasicInstallation } from './components/immer-docs/basics-installation';
-import { CurriedProducers } from './components/immer-docs/curried-producers';
-import { ReactAndImmerTodo } from './components/immer-docs/reactAndImmer';
-import { TodoListImmerFirst } from './components/immer-docs/simple-todo';
-import { UsingProduceTodos } from './components/immer-docs/using-produce';
+import { BasicInstallation } from './components/immer-docs/basics/basics-installation';
+import { CurriedProducers } from './components/immer-docs/basics/curried-producers';
+import { ReactAndImmerTodo } from './components/immer-docs/basics/reactAndImmer';
+import { TodoListImmerFirst } from './components/immer-docs/basics/simple-todo';
+import { ArrayMutationsTodos } from './components/immer-docs/basics/update-patters/array-mutations';
+import { NestedDataStructures } from './components/immer-docs/basics/update-patters/nested-data-structures';
+import { UpdatePatternsTodos } from './components/immer-docs/basics/update-patters/update-pattern';
+import { UsingProduceTodos } from './components/immer-docs/basics/using-produce';
 import Root from './components/root';
 
 export type RouterElementType = {
@@ -59,6 +62,18 @@ export const immerElements: RouterElementType[] = [
   {
     path: 'react-and-immer-todo',
     element: <ReactAndImmerTodo />,
+  },
+  {
+    path: 'update-patterns-todos',
+    element: <UpdatePatternsTodos />,
+  },
+  {
+    path: 'array-mutations-todos',
+    element: <ArrayMutationsTodos />,
+  },
+  {
+    path: 'nested-data-structures',
+    element: <NestedDataStructures />,
   },
 ];
 

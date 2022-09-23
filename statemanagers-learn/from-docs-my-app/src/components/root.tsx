@@ -42,6 +42,7 @@ export default function Root() {
           name={'hook state elements'}
           expand={true}
         />
+        <hr />
         <NavElements
           routerElements={immerElements}
           name={'immer elements'}
