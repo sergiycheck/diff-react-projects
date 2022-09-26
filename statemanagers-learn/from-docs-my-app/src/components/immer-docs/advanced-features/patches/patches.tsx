@@ -69,5 +69,20 @@ export function produceWithPatchesTodos() {
 export default function AdvancedImmerPatches() {
   const obj = produceWithPatchesTodos();
 
-  return <div>{JSON.stringify(obj)}</div>;
+  return (
+    <div>
+      <h2>
+        learning guides from creator of immer <b>Michel Weststrate</b>{' '}
+        <a
+          style={{ color: 'Highlight' }}
+          href="https://medium.com/@mweststrate/distributing-state-changes-using-snapshots-patches-and-actions-part-2-2f50d8363988"
+        >
+          medium game guide with patches and immer
+        </a>{' '}
+      </h2>
+
+      <h3>JSON state</h3>
+      <p>{JSON.stringify(obj)}</p>
+    </div>
+  );
 }
