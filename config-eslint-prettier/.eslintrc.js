@@ -1,0 +1,41 @@
+module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+    jest: true,
+  },
+  extends: [
+    'airbnb',
+    'airbnb/hooks',
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+  ],
+  settings: {
+    'import/resolver': {
+      typescript: {},
+    },
+  },
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json'],
+  },
+  plugins: ['react', '@typescript-eslint', 'react-hooks', 'jest'],
+  rules: {
+    'react/jsx-filename-extension': ['warn', { extensions: ['.tsx', '.svg'] }],
+    indent: ['error', 2],
+    'linebreak-style': ['error', 'unix'],
+    quotes: ['error', 'single'],
+    semi: ['off'],
+    'react/react-in-jsx-scope': 'off',
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      { ts: 'never', tsx: 'never' },
+    ],
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
+  },
+};
