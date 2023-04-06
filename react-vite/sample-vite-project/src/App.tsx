@@ -8,12 +8,13 @@ function App() {
   return (
     <div className="App">
       <div className="card">
-        <img src="src/assets/working_console_ninja.png" alt="" />
+        <img src="src/assets/whyReact-header.webp" alt="react genius" />
         <br />
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <p>console ninja is working in this app</p>
+        <button onClick={() => setCount(() => 0)}>reset</button>
+        <p>React genius</p>
       </div>
     </div>
   );
