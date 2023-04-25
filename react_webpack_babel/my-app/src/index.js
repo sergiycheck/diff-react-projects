@@ -14,13 +14,7 @@ const Hi = () => {
                 <h1>Hi</h1>
               </div>
               <div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Voluptate exercitationem unde voluptates blanditiis
-                  consequatur distinctio? Magni aliquid, labore magnam facere
-                  placeat commodi vero, deserunt, vitae eligendi non incidunt
-                  odio minima.
-                </p>
+                <p>Change 2, 3, 4, 5, 7</p>
               </div>
             </div>
           </div>
